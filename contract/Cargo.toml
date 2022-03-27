@@ -3,7 +3,7 @@ name = "bluna-lev-arb"
 version = "1.0.0"
 authors = ["larry <larry@delphidigital.io>"]
 edition = "2018"
-license = "UNLICENSED"
+license = "GPL-3.0-or-later"
 repository = "https://github.com/larry0x/bluna-leveraged-arbitrage"
 
 [lib]
