@@ -15,7 +15,7 @@ pub struct Config<T> {
     /// Address of Mars protocol lending market contract
     pub red_bank: T,
     /// Accounts to receive portions of the profit, and their percentage shares. The sum of the
-    /// shares must be less or equal to one. The rest of funds will be sent to owner.
+    /// shares must be less or equal to one. Remaining profit goes to the owner.
     pub profit_shares: Vec<(T, Decimal)>,
 }
 
