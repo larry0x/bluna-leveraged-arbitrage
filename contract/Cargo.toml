@@ -1,0 +1,31 @@
+[package]
+name = "bluna-lev-arb"
+version = "1.0.0"
+authors = ["larry <larry@delphidigital.io>"]
+edition = "2018"
+license = "UNLICENSED"
+repository = "https://github.com/larry0x/bluna-leveraged-arbitrage"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+
+[profile.release]
+rpath = false
+lto = true
+overflow-checks = true
+
+[dependencies]
+astroport = "1.0"
+basset = { git = "https://github.com/Anchor-Protocol/anchor-bAsset-contracts", tag = "v0.2.1" } # not available on crates.io
+cosmwasm-std = "0.16"
+cw20 = "0.9"
+cw-asset = { version = "1.0", features = ["astroport", "mars"] }
+cw-storage-plus = "0.9"
+mars-core = "1.0"
+schemars = "0.8.1"
+serde = { version = "1.0.103", default-features = false, features = ["derive"] }
+
+uint = "=0.9.1" # https://github.com/CosmWasm/cosmwasm/issues/1204
